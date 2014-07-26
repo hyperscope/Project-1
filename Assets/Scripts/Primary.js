@@ -17,7 +17,6 @@ function OnGUI(){
     GUI.Box (new Rect (10, 10, 100, 20), "Health = " + playerHealth);
 }
 
-
 function killPlayer(){
     //destroy player
     Destroy(gameObject);
@@ -28,12 +27,12 @@ function OnTriggerStay (other : Collider){
 	if (other.gameObject.CompareTag("Black Orbit"))
 		{
 		//damaging = true;
-		playerHealth -= 100 * Time.deltaTime; 
+		playerHealth -= 1; //Time.deltaTime;
 		}
 	if (other.gameObject.CompareTag("White Orb"))
 		{
 		//damaging = true;
-		playerHealth += 100 * Time.deltaTime;
+		playerHealth += 1;  //Time.deltaTime;
 		}
 	if (playerHealth > maxHealth) {
 	  	playerHealth = maxHealth;
